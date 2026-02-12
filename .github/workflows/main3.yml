@@ -1,0 +1,42 @@
+# このGitHub Actionsの名前定義
+name: Unity Build
+# このGitHub Actionsが実行されるトリガーを定義
+on:
+    # 手動のみで実行する場合はworkflow_dispatchを指定
+    workflow_dispatch: {}
+jobs:
+  build:
+    # Self-hosted runnerを使用時にはruns-on: self-hostedを指定する    
+    runs-on: self-hosted
+    steps:
+      - name: Checkout
+        # このGitHub Actionsが実行される前に必要なアクションを指定 (今回はチェックアウトを行うアクション)
+        uses: actions/checkout@v2
+        with:
+          # クローンする際にローカルリポジトリをクリーンにするかどうかを指定
+          clean: false
+          # LFSを使用するかどうかを指定
+          lfs: false
+      - name: Build
+        shell: cmd
+        run: |
+          set "UNITY_EXE=C:\Program Files\Unity\Hub\Editor\6000.3.6f1\Editor\Unity.exe"
+          set "PROJECT_PATH=C:\Users\silve\Documents\Runner-Test"
+          set "OUTPUT_PATH=%PROJECT_PATH%\Build"
+
+          echo Unity: "%UNITY_EXE%"
+          echo Project: "%PROJECT_PATH%"
+          echo Output: "%OUTPUT_PATH%"
+
+          if not exist "%UNITY_EXE%" (
+            echo Unity.exe not found.
+            exit /b 2
+          )
+          if not exist "%PROJECT_PATH%\ProjectSettings\ProjectVersion.txt" (
+            echo Unity project not found at PROJECT_PATH.
+            exit /b 3
+          )
+
+          if exist "%OUTPUT_PATH%" rmdir /s /q "%OUTPUT_PATH%"
+
+          "%UNITY_EXE%" -batchmode -quit -projectPath "%PROJECT_PATH%" -executeMethod BuildCommand.Build -platform Windows -devmode true -outputPath "%OUTPUT_PATH%" -logFile -

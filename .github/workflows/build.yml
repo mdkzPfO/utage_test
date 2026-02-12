@@ -1,0 +1,164 @@
+name: build.yml
+on:
+  workflow_dispatch: {}
+jobs:
+  # test:
+  #   name: Run EditMode and PlayMode Test
+  #   runs-on: ubuntu-latest
+  #   environment: gameci
+  #   steps:
+  #     # actions/checkout@v2 を利用して作業ディレクトリに
+  #     # Unity プロジェクトの中身をダウンロードしてくる
+  #     - name: Check out my unity project.
+  #       uses: actions/checkout@v4
+
+  #     # GameCI の Test runner を利用して
+  #     # EditMode 及び PlayMode のテストを実行する
+  #     - name: Run EditMode and PlayMode Test
+  #       uses: game-ci/unity-test-runner@v2
+  #       env:
+  #         # 2. の手順で Secrets に登録した Unity ライセンスの情報を指定する
+  #         UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+  #         UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }} # secrets変数を使用する
+  #         UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+
+  #         # もし Professional license を使いたい場合は、
+  #         # メールアドレス、パスワード、シリアルナンバーを入力する必要がある
+  #         # ref: https://game.ci/docs/github/test-runner#professional-license
+  #         # UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+  #         # UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+  #         # UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
+  #       with:
+  #         projectPath: .
+  #         # テストの実行結果もみたい場合は githubToken を指定する
+  #         # secrets.GITHUB_TOKEN は Secrets 未登録でも利用可能
+  #         githubToken: ${{ secrets.GITHUB_TOKEN }}
+
+  #         # Unity プロジェクトのバージョンを指定する
+  #         # ProjectSettings/ProjectVersion.txt に記載されているバージョンを入力すれば OK
+  #         unityVersion: 2021.3.9f1
+
+  #         # 実行したいテストの種類を指定できる
+  #         # 指定可能な値は All, PlayMode, EditMode
+  #         # testMode: All
+
+  #         # テスト実行時に利用したい Docker イメージを明示的に指定できる
+  #         # customImage: 'unityci/editor:2020.1.14f1-base-0'
+
+  #     # テストの実行結果をアーティファクトにアップロードしてダウンロードして参照できるようにする
+  #     - name: Upload the WebGL Build
+  #       uses: actions/upload-artifact@v4
+  #       with:
+  #         name: Test results
+  #         path: artifacts
+
+  build:
+    runs-on: ubuntu-latest
+    environment: gameci
+    needs: test
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4 # リポジトリをクローン
+
+      - name: build
+        uses: game-ci/unity-builder@v4 # ビルド
+        env:
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }} # secrets変数を使用する
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        with:
+          targetPlatform: WebGL
+          unityVersion: 6000.3.6f1
+          #compression: none
+      
+      - name: Upload Artifact
+        # ビルド成果物をアップロードするアクションを指定
+        uses: actions/upload-artifact@v4
+        with:
+          # アップロードする成果物の名前を指定
+          name: BuildArtifact
+          # アップロードする成果物のパスを指定
+          path: build
+          
+          # 成果物の保存期間を指定 (デフォルトは90日)
+          retention-days: 30
+  # S3 bucket name
+  # The Deploy job primarily uses AWS containers to upload assets to S3.
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: gameci
+    steps:
+      # 1. Checkout code.
+      - uses: actions/checkout@v3
+        name: Checkout
+      # 2. Download package from build job (the WebGL package).
+      - uses: actions/download-artifact@v4
+        name: Download artifacts
+        with:
+          name: BuildArtifact
+          path: build
+      
+      # 3. Configure AWS credentials. You will need to get these from IAM.
+      - uses: aws-actions/configure-aws-credentials@v4
+        name: Configure AWS credentials from Test account
+        with:
+          aws-region: us-east-1
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          # You can skip role-to-assume if your access keys contain power user credentials.
+          # Best practice is to implement least-based privileges,
+
+            # デバッグ: カレントディレクトリとファイル構造を確認
+      - name: "[Debug] Show current directory and file structure"
+        run: |
+          echo "=== Current directory ==="
+          pwd
+          echo ""
+          echo "=== Root directory contents ==="
+          ls -la
+          echo ""
+          echo "=== Build directory contents ==="
+          ls -la build/
+          echo ""
+          echo "=== Build directory tree (max 3 levels) ==="
+          find build -maxdepth 3 -type f | head -20
+      # 4. Sync assets to bucket.
+      - name: "[Deploy Phase 1] Sync everything from public dir to S3 bucket"
+        working-directory: build
+        run: aws s3 sync ./WebGL/WebGL s3://game-webgl-origin --delete
+      # 5. HERE BE DRAGONS - update metadata
+      # "aws s3 sync" is a blunt tool.
+      # Your assets will be synced, but missing necessary metadata,
+      # e.g. content-type and content-encoding.
+      # Although it is hacky, the next few commands iterate over certain file types
+      # and re-copy them with the correct metadata.
+      - name: "[Deploy Phase 2] Brotli-compressed files"
+        working-directory: build
+        run: |
+          aws s3 cp ./WebGL/WebGL s3://game-webgl-origin \
+            --exclude="*" --include="*.br" \
+            --content-encoding br \
+            --content-type="binary/octet-stream" \
+            --metadata-directive REPLACE --recursive;
+
+      - name: "[Deploy Phase 3] Brotli-compressed Javascript"
+        working-directory: build
+        run: |
+          aws s3 cp ./WebGL/WebGL s3://game-webgl-origin \
+            --exclude="*" --include="*.js.br" \
+            --content-encoding br \
+            --content-type="application/javascript" \
+            --metadata-directive REPLACE --recursive;
+
+      - name: "[Deploy Phase 4] Brotli-compressed WASM"
+        working-directory: build
+        run: |
+          aws s3 cp ./WebGL/WebGL s3://game-webgl-origin \
+            --exclude="*" --include="*.wasm.br" \
+            --content-encoding br \
+            --content-type="application/wasm" \
+            --metadata-directive REPLACE --recursive;
+
+
+
