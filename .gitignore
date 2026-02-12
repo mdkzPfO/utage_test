@@ -1,0 +1,20 @@
+# Unity generated
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+UserSettings/
+MemoryCaptures/
+
+# IDE
+.vs/
+.idea/
+*.csproj
+*.sln
+*.user
+
+# OS
+.DS_Store
+Thumbs.db

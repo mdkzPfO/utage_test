@@ -1,0 +1,13 @@
+﻿<Solution>
+  <Project Path="UtageForUrp.csproj" />
+  <Project Path="Utage.csproj" />
+  <Project Path="UtageSample.csproj" />
+  <Project Path="UtageEditor.csproj" />
+  <Project Path="Utage.RenderPipeline.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="Assembly-CSharp-Editor.csproj" />
+  <Project Path="UtageExcelParser.csproj" />
+  <Project Path="UtageInputSystem.csproj" />
+  <Project Path="UtageForUrpEditor.csproj" />
+  <Project Path="UtageInputSystemEditor.csproj" />
+</Solution>
