@@ -1,0 +1,20 @@
+{
+    "name": "MyProject.Editor.Tests",
+    "rootNamespace": "",
+    "references": [
+        "GUID:131cd50be100e1745b995f9fa2aee29f"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
