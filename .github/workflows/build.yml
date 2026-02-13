@@ -90,7 +90,7 @@ jobs:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
           targetPlatform: WebGL
-          unityVersion: 6000.3.6f1
+          unityVersion: 6000.3.8f1
           #compression: none
       
       - name: Upload Artifact
