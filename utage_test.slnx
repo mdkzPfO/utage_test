@@ -10,4 +10,5 @@
   <Project Path="UtageInputSystem.csproj" />
   <Project Path="UtageForUrpEditor.csproj" />
   <Project Path="UtageInputSystemEditor.csproj" />
+  <Project Path="MyProject.Tests.csproj" />
 </Solution>

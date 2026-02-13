@@ -15,6 +15,7 @@ MonoBehaviour:
   chapterName: Boot
   dataList:
   - {fileID: 11400000, guid: 9a14e9179309c4f4498eeda83d531053, type: 2}
+  - {fileID: 11400000, guid: ad3b60001f6a36d4dac73c35e1fdb972, type: 2}
   settingList:
   - rows:
     - rowIndex: 0
@@ -310,9 +311,27 @@ MonoBehaviour:
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
+    - rowIndex: 2
+      debugIndex: 2
+      strings:
+      - flag1
+      - Bool
+      - FALSE
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 3
+      debugIndex: 3
+      strings:
+      - flag2
+      - Bool
+      - FALSE
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
     name: Assets/MyProject/Scenarios/MyProject.xls:Param
     type: 1
-    textLength: 50
+    textLength: 78
     headerRow: 0
     sourceAssetInEditor: {fileID: 102900000, guid: 2a2e53faa7a291c42a41e780176283dc, type: 3}
   - rows:

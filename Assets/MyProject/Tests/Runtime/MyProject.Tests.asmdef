@@ -2,7 +2,10 @@
     "name": "MyProject.Tests",
     "rootNamespace": "",
     "references": [
-        "GUID:8d17445f5deb4254a83251fd450606ad"
+        "GUID:8d17445f5deb4254a83251fd450606ad",
+        "Utage",
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
