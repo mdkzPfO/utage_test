@@ -314,14 +314,23 @@ MonoBehaviour:
     - rowIndex: 2
       debugIndex: 2
       strings:
+      - point
+      - Int
+      - 0
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 3
+      debugIndex: 3
+      strings:
       - flag1
       - Bool
       - FALSE
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
-    - rowIndex: 3
-      debugIndex: 3
+    - rowIndex: 4
+      debugIndex: 4
       strings:
       - flag2
       - Bool
@@ -331,7 +340,7 @@ MonoBehaviour:
       debugInfo: 
     name: Assets/MyProject/Scenarios/MyProject.xlsx:Param
     type: 1
-    textLength: 78
+    textLength: 87
     headerRow: 0
     sourceAssetInEditor: {fileID: 102900000, guid: dd417418961a31f4d8d3cf71014a07ba, type: 3}
   - rows:
