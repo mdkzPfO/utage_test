@@ -73,9 +73,24 @@ MonoBehaviour:
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
+    - rowIndex: 1
+      debugIndex: 1
+      strings:
+      - "\u80CC\u666F\u305D\u306E\uFF11"
+      - Bg
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Researchers-Room1.jpg
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
     name: Assets/MyProject/Scenarios/MyProject.xlsx:Texture
     type: 1
-    textLength: 112
+    textLength: 140
     headerRow: 0
     sourceAssetInEditor: {fileID: 102900000, guid: dd417418961a31f4d8d3cf71014a07ba, type: 3}
   - rows:
@@ -282,12 +297,26 @@ MonoBehaviour:
       - FileName
       - IntroTime
       - Volume
+      - English
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 1
+      debugIndex: 1
+      strings:
+      - "BGM\u305D\u306E1"
+      - "\u30E1\u30A4\u30F3\u30C6\u30FC\u30DE"
+      - Bgm
+      - Ordinary_Days.mp3
+      - 2.976
+      - 
+      - Main theme
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
     name: Assets/MyProject/Scenarios/MyProject.xlsx:Sound
     type: 1
-    textLength: 37
+    textLength: 91
     headerRow: 0
     sourceAssetInEditor: {fileID: 102900000, guid: dd417418961a31f4d8d3cf71014a07ba, type: 3}
   - rows:
@@ -314,14 +343,23 @@ MonoBehaviour:
     - rowIndex: 2
       debugIndex: 2
       strings:
+      - point
+      - Int
+      - 0
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 3
+      debugIndex: 3
+      strings:
       - flag1
       - Bool
       - FALSE
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
-    - rowIndex: 3
-      debugIndex: 3
+    - rowIndex: 4
+      debugIndex: 4
       strings:
       - flag2
       - Bool
@@ -331,7 +369,7 @@ MonoBehaviour:
       debugInfo: 
     name: Assets/MyProject/Scenarios/MyProject.xlsx:Param
     type: 1
-    textLength: 78
+    textLength: 87
     headerRow: 0
     sourceAssetInEditor: {fileID: 102900000, guid: dd417418961a31f4d8d3cf71014a07ba, type: 3}
   - rows:
