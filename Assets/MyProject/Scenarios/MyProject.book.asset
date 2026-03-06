@@ -40,7 +40,7 @@ MonoBehaviour:
       - Bgm
       - "BGM\u305D\u306E1"
       - 
-      - 
+      - 0.5
       - 
       - 
       - 
@@ -3142,7 +3142,7 @@ MonoBehaviour:
       debugInfo: 
     name: Assets/MyProject/Scenarios/MyProject.xlsx:Start
     type: 1
-    textLength: 3897
+    textLength: 3900
     headerRow: 0
     sourceAssetInEditor: {fileID: 102900000, guid: 7e3c1d330acb7004882646b34c70635a, type: 3}
     entityIndexTbl: 
@@ -3758,7 +3758,7 @@ MonoBehaviour:
       - 
       - 2
       - 
-      - "\u30DE\u30B6\u30FC\u901A\u5E38.png"
+      - "\u30DE\u30B6\u30FC/\u30DE\u30B6\u30FC\u901A\u5E38.png"
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
@@ -3774,7 +3774,7 @@ MonoBehaviour:
       - 
       - 2
       - 
-      - "\u30DE\u30B6\u30FC\u7B11\u9854.png"
+      - "\u30DE\u30B6\u30FC/\u30DE\u30B6\u30FC\u7B11\u9854.png"
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
@@ -3790,7 +3790,7 @@ MonoBehaviour:
       - 
       - 2
       - 
-      - "\u30DE\u30B6\u30FC\u5FC3\u914D.png"
+      - "\u30DE\u30B6\u30FC/\u30DE\u30B6\u30FC\u5FC3\u914D.png"
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
@@ -3806,7 +3806,7 @@ MonoBehaviour:
       - 
       - 2
       - 
-      - "\u30DE\u30B6\u30FC\u5FAE\u7B11.png"
+      - "\u30DE\u30B6\u30FC/\u30DE\u30B6\u30FC\u5FAE\u7B11.png"
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
@@ -3822,7 +3822,7 @@ MonoBehaviour:
       - 
       - 2
       - 
-      - "\u30DE\u30B6\u30FC\u56F0\u308A\u9854.png"
+      - "\u30DE\u30B6\u30FC/\u30DE\u30B6\u30FC\u56F0\u308A\u9854.png"
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
@@ -3838,7 +3838,7 @@ MonoBehaviour:
       - 
       - 2
       - 
-      - "\u30DE\u30B6\u30FC\u7591\u554F.png"
+      - "\u30DE\u30B6\u30FC/\u30DE\u30B6\u30FC\u7591\u554F.png"
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
@@ -3863,15 +3863,15 @@ MonoBehaviour:
       - 
       - 
       - 
+      - 1.5
       - 
-      - 
-      - bcd13648-04a6-4cd0-8684-654321b47d70.png
+      - "\u6240\u9577.png"
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
     name: Assets/MyProject/Scenarios/MyProject.xlsx:Character
     type: 1
-    textLength: 328
+    textLength: 321
     headerRow: 0
     sourceAssetInEditor: {fileID: 102900000, guid: 7e3c1d330acb7004882646b34c70635a, type: 3}
   - rows:
@@ -3908,13 +3908,13 @@ MonoBehaviour:
       - 
       - 
       - 
-      - Researchers-Room1.jpg
+      - "\u80CC\u666F.png"
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
     name: Assets/MyProject/Scenarios/MyProject.xlsx:Texture
     type: 1
-    textLength: 140
+    textLength: 125
     headerRow: 0
     sourceAssetInEditor: {fileID: 102900000, guid: 7e3c1d330acb7004882646b34c70635a, type: 3}
   - rows:
@@ -4311,7 +4311,7 @@ MonoBehaviour:
       - Bgm
       - "BGM\u305D\u306E1"
       - 
-      - 
+      - 0.5
       - 
       - 
       - 
@@ -7419,7 +7419,7 @@ MonoBehaviour:
       debugInfo: 
     name: Assets/MyProject/Scenarios/MyProject.xlsx:Start
     type: 1
-    textLength: 3897
+    textLength: 3900
     headerRow: 0
     sourceAssetInEditor: {fileID: 102900000, guid: 7e3c1d330acb7004882646b34c70635a, type: 3}
   - rows:
