@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chapterName: Boot
   dataList:
-  - {fileID: 11400000, guid: 9a14e9179309c4f4498eeda83d531053, type: 2}
+  - {fileID: 11400000, guid: 889156862a8b3824dbffec584b428da3, type: 2}
   - {fileID: 11400000, guid: ad3b60001f6a36d4dac73c35e1fdb972, type: 2}
   settingList:
   - rows:
@@ -45,11 +45,134 @@ MonoBehaviour:
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
-    name: Assets/MyProject/Scenarios/MyProject.xlsx:Character
+    - rowIndex: 1
+      debugIndex: 1
+      strings:
+      - "\u30DE\u30B6\u30FC"
+      - "\u30DE\u30B6\u30FC"
+      - "\u901A\u5E38"
+      - 
+      - 
+      - 
+      - 
+      - 2
+      - 
+      - "\u30DE\u30B6\u30FC/\u30DE\u30B6\u30FC\u901A\u5E38.png"
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 2
+      debugIndex: 2
+      strings:
+      - "\u30DE\u30B6\u30FC"
+      - "\u30DE\u30B6\u30FC"
+      - "\u7B11\u9854"
+      - 
+      - 
+      - 
+      - 
+      - 2
+      - 
+      - "\u30DE\u30B6\u30FC/\u30DE\u30B6\u30FC\u7B11\u9854.png"
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 3
+      debugIndex: 3
+      strings:
+      - "\u30DE\u30B6\u30FC"
+      - "\u30DE\u30B6\u30FC"
+      - "\u5FC3\u914D"
+      - 
+      - 
+      - 
+      - 
+      - 2
+      - 
+      - "\u30DE\u30B6\u30FC/\u30DE\u30B6\u30FC\u5FC3\u914D.png"
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 4
+      debugIndex: 4
+      strings:
+      - "\u30DE\u30B6\u30FC"
+      - "\u30DE\u30B6\u30FC"
+      - "\u5FAE\u7B11"
+      - 
+      - 
+      - 
+      - 
+      - 2
+      - 
+      - "\u30DE\u30B6\u30FC/\u30DE\u30B6\u30FC\u5FAE\u7B11.png"
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 5
+      debugIndex: 5
+      strings:
+      - "\u30DE\u30B6\u30FC"
+      - "\u30DE\u30B6\u30FC"
+      - "\u56F0\u308A\u9854"
+      - 
+      - 
+      - 
+      - 
+      - 2
+      - 
+      - "\u30DE\u30B6\u30FC/\u30DE\u30B6\u30FC\u56F0\u308A\u9854.png"
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 6
+      debugIndex: 6
+      strings:
+      - "\u30DE\u30B6\u30FC"
+      - "\u30DE\u30B6\u30FC"
+      - "\u7591\u554F"
+      - 
+      - 
+      - 
+      - 
+      - 2
+      - 
+      - "\u30DE\u30B6\u30FC/\u30DE\u30B6\u30FC\u7591\u554F.png"
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 7
+      debugIndex: 7
+      strings:
+      - "\u535A\u58EB"
+      - "\u535A\u58EB"
+      - "\u901A\u5E38"
+      - 
+      - 
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 8
+      debugIndex: 8
+      strings:
+      - "\u6240\u9577"
+      - "\u6240\u9577"
+      - "\u901A\u5E38"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - bcd13648-04a6-4cd0-8684-654321b47d70.png
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    name: Assets/MyProject/Scenarios/MyProject (1).xlsx:Character
     type: 1
-    textLength: 166
+    textLength: 352
     headerRow: 0
-    sourceAssetInEditor: {fileID: 102900000, guid: dd417418961a31f4d8d3cf71014a07ba, type: 3}
+    sourceAssetInEditor: {fileID: 102900000, guid: 323a1b37cd11bea428fed24f7784d235, type: 3}
   - rows:
     - rowIndex: 0
       debugIndex: 0
@@ -88,11 +211,11 @@ MonoBehaviour:
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
-    name: Assets/MyProject/Scenarios/MyProject.xlsx:Texture
+    name: Assets/MyProject/Scenarios/MyProject (1).xlsx:Texture
     type: 1
     textLength: 140
     headerRow: 0
-    sourceAssetInEditor: {fileID: 102900000, guid: dd417418961a31f4d8d3cf71014a07ba, type: 3}
+    sourceAssetInEditor: {fileID: 102900000, guid: 323a1b37cd11bea428fed24f7784d235, type: 3}
   - rows:
     - rowIndex: 0
       debugIndex: 0
@@ -102,11 +225,11 @@ MonoBehaviour:
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
-    name: Assets/MyProject/Scenarios/MyProject.xlsx:Particle
+    name: Assets/MyProject/Scenarios/MyProject (1).xlsx:Particle
     type: 1
     textLength: 13
     headerRow: 0
-    sourceAssetInEditor: {fileID: 102900000, guid: dd417418961a31f4d8d3cf71014a07ba, type: 3}
+    sourceAssetInEditor: {fileID: 102900000, guid: 323a1b37cd11bea428fed24f7784d235, type: 3}
   - rows:
     - rowIndex: 0
       debugIndex: 0
@@ -131,11 +254,11 @@ MonoBehaviour:
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
-    name: Assets/MyProject/Scenarios/MyProject.xlsx:Layer
+    name: Assets/MyProject/Scenarios/MyProject (1).xlsx:Layer
     type: 1
     textLength: 109
     headerRow: 0
-    sourceAssetInEditor: {fileID: 102900000, guid: dd417418961a31f4d8d3cf71014a07ba, type: 3}
+    sourceAssetInEditor: {fileID: 102900000, guid: 323a1b37cd11bea428fed24f7784d235, type: 3}
   - rows:
     - rowIndex: 0
       debugIndex: 0
@@ -158,11 +281,11 @@ MonoBehaviour:
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
-    name: Assets/MyProject/Scenarios/MyProject.xlsx:EyeBlink
+    name: Assets/MyProject/Scenarios/MyProject (1).xlsx:EyeBlink
     type: 1
     textLength: 112
     headerRow: 0
-    sourceAssetInEditor: {fileID: 102900000, guid: dd417418961a31f4d8d3cf71014a07ba, type: 3}
+    sourceAssetInEditor: {fileID: 102900000, guid: 323a1b37cd11bea428fed24f7784d235, type: 3}
   - rows:
     - rowIndex: 0
       debugIndex: 0
@@ -185,11 +308,11 @@ MonoBehaviour:
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
-    name: Assets/MyProject/Scenarios/MyProject.xlsx:LipSynch
+    name: Assets/MyProject/Scenarios/MyProject (1).xlsx:LipSynch
     type: 1
     textLength: 106
     headerRow: 0
-    sourceAssetInEditor: {fileID: 102900000, guid: dd417418961a31f4d8d3cf71014a07ba, type: 3}
+    sourceAssetInEditor: {fileID: 102900000, guid: 323a1b37cd11bea428fed24f7784d235, type: 3}
   - rows:
     - rowIndex: 0
       debugIndex: 0
@@ -282,11 +405,11 @@ MonoBehaviour:
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
-    name: Assets/MyProject/Scenarios/MyProject.xlsx:Animation
+    name: Assets/MyProject/Scenarios/MyProject (1).xlsx:Animation
     type: 1
     textLength: 96
     headerRow: 0
-    sourceAssetInEditor: {fileID: 102900000, guid: dd417418961a31f4d8d3cf71014a07ba, type: 3}
+    sourceAssetInEditor: {fileID: 102900000, guid: 323a1b37cd11bea428fed24f7784d235, type: 3}
   - rows:
     - rowIndex: 0
       debugIndex: 0
@@ -314,11 +437,21 @@ MonoBehaviour:
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
-    name: Assets/MyProject/Scenarios/MyProject.xlsx:Sound
+    - rowIndex: 2
+      debugIndex: 2
+      strings:
+      - "\u30CE\u30C3\u30AF\u97F3"
+      - 
+      - Se
+      - "\u6728\u306E\u30C9\u30A2\u3092\u30CE\u30C3\u30AF1.mp3"
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    name: Assets/MyProject/Scenarios/MyProject (1).xlsx:Sound
     type: 1
-    textLength: 91
+    textLength: 110
     headerRow: 0
-    sourceAssetInEditor: {fileID: 102900000, guid: dd417418961a31f4d8d3cf71014a07ba, type: 3}
+    sourceAssetInEditor: {fileID: 102900000, guid: 323a1b37cd11bea428fed24f7784d235, type: 3}
   - rows:
     - rowIndex: 0
       debugIndex: 0
@@ -367,11 +500,11 @@ MonoBehaviour:
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
-    name: Assets/MyProject/Scenarios/MyProject.xlsx:Param
+    name: Assets/MyProject/Scenarios/MyProject (1).xlsx:Param
     type: 1
     textLength: 87
     headerRow: 0
-    sourceAssetInEditor: {fileID: 102900000, guid: dd417418961a31f4d8d3cf71014a07ba, type: 3}
+    sourceAssetInEditor: {fileID: 102900000, guid: 323a1b37cd11bea428fed24f7784d235, type: 3}
   - rows:
     - rowIndex: 0
       debugIndex: 0
@@ -394,11 +527,11 @@ MonoBehaviour:
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
-    name: Assets/MyProject/Scenarios/MyProject.xlsx:ParamTbl{}
+    name: Assets/MyProject/Scenarios/MyProject (1).xlsx:ParamTbl{}
     type: 1
     textLength: 16
     headerRow: 0
-    sourceAssetInEditor: {fileID: 102900000, guid: dd417418961a31f4d8d3cf71014a07ba, type: 3}
+    sourceAssetInEditor: {fileID: 102900000, guid: 323a1b37cd11bea428fed24f7784d235, type: 3}
   - rows:
     - rowIndex: 0
       debugIndex: 0
@@ -409,11 +542,11 @@ MonoBehaviour:
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
-    name: Assets/MyProject/Scenarios/MyProject.xlsx:SceneGallery
+    name: Assets/MyProject/Scenarios/MyProject (1).xlsx:SceneGallery
     type: 1
     textLength: 27
     headerRow: 0
-    sourceAssetInEditor: {fileID: 102900000, guid: dd417418961a31f4d8d3cf71014a07ba, type: 3}
+    sourceAssetInEditor: {fileID: 102900000, guid: 323a1b37cd11bea428fed24f7784d235, type: 3}
   - rows:
     - rowIndex: 0
       debugIndex: 0
@@ -422,9 +555,9 @@ MonoBehaviour:
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
-    name: Assets/MyProject/Scenarios/MyProject.xlsx:Localize
+    name: Assets/MyProject/Scenarios/MyProject (1).xlsx:Localize
     type: 1
     textLength: 3
     headerRow: 0
-    sourceAssetInEditor: {fileID: 102900000, guid: dd417418961a31f4d8d3cf71014a07ba, type: 3}
+    sourceAssetInEditor: {fileID: 102900000, guid: 323a1b37cd11bea428fed24f7784d235, type: 3}
   customDataList: []
