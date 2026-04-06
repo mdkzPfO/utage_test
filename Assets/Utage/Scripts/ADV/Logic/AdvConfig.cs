@@ -483,10 +483,7 @@ namespace Utage
 		/// </summary>
 		public void StopSkipInSelection()
 		{
-			if (IsStopSkipInSelection && isSkip)
-			{
-				isSkip = false;
-			}
+			// 選択肢でスキップ解除を無効化
 		}
 
 		/// <summary>

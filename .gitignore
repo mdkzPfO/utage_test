@@ -18,3 +18,12 @@ MemoryCaptures/
 # OS
 .DS_Store
 Thumbs.db
+# Test screenshots
+Rendering_*.png
+
+# Conversion scripts (one-shot, no longer needed)
+convert_scenario.py
+fix_scenario.py
+add_effects.py
+add_more_effects.py
+scenario_main_dump.txt

@@ -29,9 +29,9 @@ namespace Utage
 		/// <summary>エフェクトON・OFF切り替え</summary>
 		public bool isEffect = true;
 		/// <summary>未読スキップON・OFF切り替え</summary>
-		public bool isSkipUnread;
+		public bool isSkipUnread = true;
 		/// <summary>選択肢でスキップ解除ON・OFF切り替え</summary>
-		public bool isStopSkipInSelection = true;
+		public bool isStopSkipInSelection = false;
 
 		/// <summary>文字送り速度</summary>
 		[Range(0,1.0f)]

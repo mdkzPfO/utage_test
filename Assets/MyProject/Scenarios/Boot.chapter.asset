@@ -168,9 +168,27 @@ MonoBehaviour:
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
+    - rowIndex: 9
+      debugIndex: 9
+      strings:
+      - "\u7814\u7A76\u8005"
+      - "\u7814\u7A76\u8005"
+      - "\u901A\u5E38"
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 10
+      debugIndex: 10
+      strings:
+      - "\u30CA\u30EC\u30FC\u30B7\u30E7\u30F3"
+      - 
+      - "\u901A\u5E38"
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
     name: Assets/MyProject/Scenarios/MyProject.xlsx:Character
     type: 1
-    textLength: 321
+    textLength: 337
     headerRow: 0
     sourceAssetInEditor: {fileID: 102900000, guid: 7e3c1d330acb7004882646b34c70635a, type: 3}
   - rows:
@@ -500,9 +518,36 @@ MonoBehaviour:
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
+    - rowIndex: 5
+      debugIndex: 5
+      strings:
+      - "flag_\u51FA\u3059"
+      - Bool
+      - FALSE
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 6
+      debugIndex: 6
+      strings:
+      - "flag_\u884C\u304F"
+      - Bool
+      - FALSE
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 7
+      debugIndex: 7
+      strings:
+      - "flag_\u8907\u88FD\u4F53"
+      - Int
+      - 0
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
     name: Assets/MyProject/Scenarios/MyProject.xlsx:Param
     type: 1
-    textLength: 87
+    textLength: 131
     headerRow: 0
     sourceAssetInEditor: {fileID: 102900000, guid: 7e3c1d330acb7004882646b34c70635a, type: 3}
   - rows:

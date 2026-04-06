@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "utage-rag": {
+      "command": "node",
+      "args": ["utage-rag/src/index.mjs"],
+      "cwd": "c:\\Users\\silve\\OneDrive\\Desktop\\ScenarioManager"
+    }
+  }
+}
